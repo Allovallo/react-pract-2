@@ -1,9 +1,10 @@
 import './App.css';
+import { Counter } from 'components/button';
 
 function App() {
   return (
     <div>
-      App
+      <Counter></Counter>
     </div>
   );
 }
