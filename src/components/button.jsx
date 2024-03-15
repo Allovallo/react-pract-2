@@ -25,11 +25,15 @@ export class Counter extends Component {
     handleIncrement = evt => {
         console.log("Клікнуто на кнопці Increment button!", evt);
         console.log("this.props: ", this.props);
+
+        this.setState((state, props) => ({value: state.value + props.step}))
     }
 
     handleDecrement = evt => {
         console.log("Клікнуто на кнопці Decrement button!", evt);
         console.log("this.props: ", this.props);
+
+        this.setState((state, props) => ({value: state.value - props.step}))
     }
 
     render() {
@@ -53,8 +57,9 @@ export class Counter extends Component {
                     //     console.log("Клікнуто на кнопці Decrement button!", evt);
                     //     console.log("this.props: ", this.props);                        
                     // }}
-                        >Increment by {step}</button>
+                        >Decrement by {step}</button>
             </div>
         )
     }
 }
+
