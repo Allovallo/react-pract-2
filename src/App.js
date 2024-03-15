@@ -4,7 +4,7 @@ import { Counter } from 'components/button';
 function App() {
   return (
     <div>
-      <Counter></Counter>
+      <Counter initialValue={10} />
     </div>
   );
 }

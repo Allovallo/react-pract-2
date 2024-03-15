@@ -3,7 +3,18 @@ import React, { Component } from "react";
 export class Counter extends Component {
     static defaultProps = {
         step: 1,
+        initialValue: 0,
     };
+
+    // constructor(props) {
+    //     super(props);
+
+    //     this.state = {
+    //         value: this.props.initialValue,
+    //     }
+    // }
+
+    state = { value: this.props.initialValue, }
 
     // constructor() {
     //     super();
@@ -26,7 +37,7 @@ export class Counter extends Component {
 
         return (
             <div>
-                <span>0</span>
+                <span>{this.state.value}</span>
                 <button
                     type="button"
                     onClick={this.handleIncrement}
@@ -47,4 +58,3 @@ export class Counter extends Component {
         )
     }
 }
-
